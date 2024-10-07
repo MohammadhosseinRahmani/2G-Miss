@@ -9,9 +9,9 @@ from sqlalchemy import null
 from sympy import subsets
 print('Get data from Excel')
 #get data from Excel
-CellList = pd.read_excel('Sample FINAL 50% ORIGINAL.xlsx','Cells')
-Alarmlist = pd.read_excel('Sample FINAL 50% ORIGINAL.xlsx','Alarms')
-TTList = pd.read_excel('Sample FINAL 50% ORIGINAL.xlsx','TTs')
+CellList = pd.read_excel('WB Name','WS Name')
+Alarmlist = pd.read_excel('WB Name','WS Name')
+TTList = pd.read_excel('WB Name','WS Name')
 
 #remove Row for has TT
 def remove_based_on_tt_status(df):
@@ -230,7 +230,8 @@ def filter_rows(group):
         return group[group['TT Status'] != 'Need TT']
     else:
         return group.drop_duplicates(subset=['NEevetntimeceasetime'])
-    
+#Cleaning data of first DF
+
 Alarmlist['cease time'].fillna(datetime.now(), inplace=True)
 Alarmlist['event time'] = pd.to_datetime(Alarmlist['event time'])
 Alarmlist['cease time'] = pd.to_datetime(Alarmlist['cease time'])
