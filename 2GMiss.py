@@ -1,5 +1,5 @@
 # =====================================================
-# Alarm & TT Processing and Outage Analysis Automation
+# MTNi Alarm & TT Processing and Outage Analysis Automation
 # =====================================================
 # Author: Mohammad Rahmani
 # Email: mhrs1995@gmail.com
